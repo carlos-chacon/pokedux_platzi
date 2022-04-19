@@ -21,7 +21,6 @@ function Home() {
   return (
     <div className='Home'>
       <Searcher />
-      {/* <PokemonList /> */}
       <PokemonList pokemons={list}/>
     </div>
   );
