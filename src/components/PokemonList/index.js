@@ -8,8 +8,8 @@ const PokemonList = () => {
 
     return (
         <Grid className='PokemonList'>
-            {pokemons.map((pokemon) => (
-                <PokemonCard />
+            {pokemons.map((pokemon, index) => (
+                <PokemonCard key={index}/>
             ))}
         </Grid>
     );
