@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 // import createSagaMiddleware from 'redux-saga';
 import App from './containers/App';
-import pokemonReducer from './reducers/pokemonReducer';
+import rootReducer from './reducers/rootReducer';
 import { logActions, reportError } from './middlewares';
 import './index.css';
 // import pokemonSaga from './sagas';
@@ -18,7 +18,7 @@ const composedEnhancers = composeAlt(
     applyMiddleware(thunk, logActions, reportError)
 );
 
-const store = createStore(pokemonReducer, composedEnhancers);
+const store = createStore(rootReducer, composedEnhancers);
 
 // sagaMiddleware.run(pokemonSaga);
 
