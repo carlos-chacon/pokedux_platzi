@@ -9,7 +9,7 @@ import './styles.css';
 
 
 function Home() {
-  const list = useSelector((state) => state.list);
+  const list = useSelector((state) => state.get('list')).toJS();
   const loading = useSelector((state) => state.loading);
   const dispatch = useDispatch();
 
